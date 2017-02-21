@@ -1,0 +1,31 @@
+group 'com.pwillmann.dev.javalearning'
+version '1.0-SNAPSHOT'
+apply plugin: 'java'
+apply plugin: 'application'
+
+
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src/main/java'
+        }
+    }
+
+    test {
+        java {
+            srcDir 'src/test/java'
+        }
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+mainClassName = "Main"
+
